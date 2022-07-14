@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - $(aws ecr get-login --no-include-email --region us-west-2)
+  build:
+    commands:
+      - echo Building the Docker image...
+      - docker build -f ./docker_env/production -t ms-auth-prod:latest .
+      - docker tag ms-auth-prod:latest 616502047607.dkr.ecr.us-west-2.amazonaws.com/ms-auth-prod:latest
+      - echo Pushing the Docker image...
+      - docker push 616502047607.dkr.ecr.us-west-2.amazonaws.com/ms-auth-prod:latest
+      - aws ecs update-service --cluster  Node-Internal  --service ms-auth-prod --desired-count 1
+      - aws ecs describe-services --cluster  Node-Internal  --service ms-auth-prod
+  post_build:
+    commands:            
+      - aws ecs update-service --cluster  Node-Internal  --service ms-auth-prod --desired-count 2

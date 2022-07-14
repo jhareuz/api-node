@@ -1,0 +1,68 @@
+//users
+{
+    "uuid":"",
+    "email":"",
+    "phone_number":"",
+    "password":"",
+    "profile":[
+        {
+            "type":"",
+            "rol":"",
+            "acls":[
+                {                  
+                  "name":"",
+                  "url":"",
+                  "grant": "D,C,R,U",
+                  "submenu":[
+                      {
+                          ...
+                      }
+                  ]
+                }
+            ]
+        }
+    ]
+}
+
+//roles
+{
+    "name":"",
+    "acls":[
+
+    ]
+}
+
+//acls
+{
+    "resource": "",
+    "url": "",
+    "type":""
+}
+
+//accounts
+{
+    "uuid":"",
+    "user_id":"",
+    "avatar_image":"",
+    "firstname":"",
+    "lastname":"",
+    "contact_email":"",
+    "contact_phone_number":"",
+    "address":{
+        "full_address":"",
+        "settlement":"",
+        "country":"",
+        "city":"",
+        "zip_code":""
+    },
+    "wallet":{
+        ..
+    },
+    "core":{
+        ..
+    },
+    "panel":{
+        ..
+    }
+}
+

@@ -1,0 +1,36 @@
+{
+    name: "Admin",
+    acls:[
+        {
+            name: "completeInfo",
+            url: "/complete",
+            taxo: "app",
+            status: "active",
+            created: 1561679083,
+            updated: 1561679083,
+            sub_menus:[]
+        },
+        {
+            name: "dashboard",
+            url: "/home",
+            taxo: "app",
+            status: "active",
+            created: 1561679083,
+            updated: 1561679083,
+            sub_menus:[]
+        },
+        {
+            name: "profile",
+            url: "/profile",
+            taxo: "app",
+            status: "active",
+            created: 1561679083,
+            updated: 1561679083,
+            sub_menus:[]
+        }                
+    ],
+    status:"active",
+    created: 1561679083,
+    updated: 1561679083,
+    taxo: "app"
+}

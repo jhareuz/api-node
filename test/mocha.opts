@@ -1,0 +1,9 @@
+--reporter spec
+--recursive
+--slow 2000
+--timeout 10000
+--require babel-register
+--require should
+--bail
+-c
+--use_strict 
